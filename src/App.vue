@@ -1,19 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container">
+    <p class="display-2">Quranis</p>
+    <p class="display-4">The simplest Quran App you'll ever need</p>
+    <List :surahs="surahs" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { surahs } from "./data/surah";
+import List from "./components/List.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    List,
+  },
+  data() {
+    return {
+      surahs: surahs,
+    };
+  },
+};
 </script>
 
 <style>
