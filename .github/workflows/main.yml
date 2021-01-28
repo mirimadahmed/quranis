@@ -24,3 +24,4 @@ jobs:
         server: ftp.ireadthatbook.com
         username: quranisftpuser@quranis.com
         password: ${{ secrets.password }}
+        local-dir: dist/
