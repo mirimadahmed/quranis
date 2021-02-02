@@ -21,7 +21,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: ftp.ireadthatbook.com
-        username: quranisftpuser@quranis.com
+        server: ${{ secrets.server }}
+        username: ${{ secrets.user }}
         password: ${{ secrets.password }}
         local-dir: dist/
